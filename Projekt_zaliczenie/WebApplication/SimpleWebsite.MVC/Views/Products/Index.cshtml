@@ -1,0 +1,55 @@
+﻿@model IEnumerable<SimpleWebsite.MVC.Models.Product>
+
+@{
+    ViewData["Title"] = "Katalog";
+}
+
+@using (Html.BeginForm("Index", "Products", FormMethod.Get, new { @class = "form-inline mb-3" }))
+{
+    <div class="input-group">
+        <input type="text" name="searchString" class="form-control" placeholder="Wyszukaj produkt">
+        <div class="input-group-append">
+            <button type="submit" class="btn btn-color"><i class="bi bi-search"></i></button>
+        </div>
+    </div>
+}
+
+<div class="row mt-5">
+    <h1 class="display-5 text-center">Katalog naszych produktów</h1>
+    <hr>
+</div>
+<p class="text-end">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <a type="button" class="btn btn-color" asp-action="Create">Dodaj nowy produkt</a>
+    }
+</p>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 mb-4">
+            <div class="card">
+                <img src="/images/@Html.DisplayFor(modelItem => item.Image)" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                    <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Cena - @Html.DisplayFor(modelItem => item.Price) zł (netto)</li>
+                </ul>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="card-body text-center">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                        
+                                <a type="button" class="btn btn-color" asp-action="Edit" asp-route-id="@item.Id">Edytuj</a>
+                                <a type="button" class="btn btn-secondary" asp-action="Details" asp-route-id="@item.Id">Szczegóły</a>
+                                <a type="button" class="btn btn-danger" asp-action="Delete" asp-route-id="@item.Id">Usuń</a>
+                        
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+</div>

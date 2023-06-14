@@ -1,0 +1,79 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: #bebebe;
+}
+
+.navbar-brand {
+    color:#11f5b6;
+}
+
+.navbar-brand:hover {
+    color:#00c180;
+}
+
+.btn-color {
+    background-color: #00BF80;
+    color: white;
+    border-color: #00BF80;
+}
+
+    .btn-color:hover {
+        background-color: #00A46D;
+        color: white;
+        border-color: #00A46D;
+    }
+
+.aqua {
+    color: #11f5b6;
+}
+
+.aqua-text {
+    color: #11f5b6;
+}
+
+.aqua:hover {
+    color: #08C48F;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-text{
+    height:125px;
+}
+
+.fit {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+    object-position: center;
+}

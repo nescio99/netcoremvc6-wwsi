@@ -1,0 +1,42 @@
+﻿@model SimpleWebsite.MVC.Models.Product
+
+@{
+    ViewData["Title"] = "Szczegóły";
+}
+
+<div class="row mt-5">
+    <h1 class="display-5 text-center">Szczegóły drona</h1>
+    <hr>
+</div>
+<div class="row">
+    <div class="col text-start">
+        <a type="button" class="btn btn-secondary" asp-action="Index">Powrót do katalogu</a>
+        </div>
+    <div class="col text-end">
+        <a type="button" class="btn btn-color" asp-action="Edit" asp-route-id="@Model?.Id">Edytuj</a>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-12 justify-content-center">
+        <table class="table table-bordered table-striped mt-3 ">
+            <tbody>
+                <tr>
+                    <th scope="row">Nazwa</th>
+                    <td>@Html.DisplayFor(model => model.Name)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Opis</th>
+                    <td>@Html.DisplayFor(model => model.Description)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Cena</th>
+                    <td>@Html.DisplayFor(model => model.Price) zł (netto)</td>
+                </tr>
+                <tr>
+                    <th scope="row">Zdjęcie</th>
+                    <td><img src="/images/@Html.DisplayFor(model => model.Image)" class="img-thumbnail fit"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
