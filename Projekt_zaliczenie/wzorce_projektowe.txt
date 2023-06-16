@@ -1,0 +1,30 @@
+*Kompozyt (Composite):
+
+Wzorzec kompozyt umożliwia tworzenie struktury drzewiastej, w której obiekty są grupowane w hierarchię.
+W .NET Core wzorzec kompozyt znajduje zastosowanie, np. w interfejsach API, gdzie złożone obiekty mogą składać się z innych obiektów, a dostęp do nich jest jednolity bez względu na poziom zagnieżdżenia.
+Przykładem zastosowania może być hierarchia elementów interfejsu użytkownika, gdzie kontrolki składają się z innych kontrolkach, a cała struktura jest obsługiwana jednolitymi metodami.
+
+*Obserwator (Observer):
+
+Wzorzec obserwatora umożliwia stworzenie relacji jeden-do-wielu między obiektami, w których zmiana stanu jednego obiektu powoduje automatyczne powiadomienie i aktualizację pozostałych obiektów.
+W .NET Core wzorzec obserwatora jest szeroko stosowany w mechanizmach zdarzeń (events) i programowaniu reaktywnym.
+Przykłady zastosowania to subskrypcje na zdarzenia w interfejsie użytkownika, reakcje na zmiany w bazie danych, komunikacja asynchroniczna między różnymi częściami systemu.
+
+*Strategia (Strategy):
+
+Wzorzec strategii umożliwia zdefiniowanie rodziny algorytmów, które są wymienne i mogą być używane w zależności od kontekstu.
+W .NET Core wzorzec strategii jest stosowany w sytuacjach, gdy konieczne jest dynamiczne wybieranie różnych algorytmów na podstawie warunków.
+Przykłady zastosowania to strategie walidacji danych, strategie sortowania, strategie cache'owania, gdzie różne algorytmy mogą być używane w zależności od potrzeb aplikacji.
+
+*Metoda Wytwórcza (Factory Method):
+
+Wzorzec metody wytwórczej umożliwia tworzenie obiektów bez konkretnego określania ich klas, poprzez przeniesienie logiki tworzenia obiektów do osobnej metody (fabryki).
+W .NET Core wzorzec metody wytwórczej jest szeroko stosowany w kontekście tworzenia instancji klas, takich jak usługi (services), obiekty repozytorium (repository), konwertery (converters) itp.
+Przykładem zastosowania jest użycie interfejsu fabryki do tworzenia różnych implementacji usług na podstawie konfiguracji, środowiska lub innych czynników.
+
+*Dekorator (Decorator):
+
+Wzorzec dekoratora umożliwia dodawanie nowych funkcjonalności do istniejących obiektów, nie zmieniając ich struktury.
+W .NET Core wzorzec dekoratora jest stosowany, np. w przypadku rozszerzania funkcjonalności obiektów w hierarchii dziedziczenia, bez konieczności tworzenia wielu klas pochodnych.
+Przykładem zastosowania jest dekorowanie strumieni danych, aby dodawać dodatkowe funkcjonalności, jak np. kompresja, szyfrowanie, buforowanie itp.
+
