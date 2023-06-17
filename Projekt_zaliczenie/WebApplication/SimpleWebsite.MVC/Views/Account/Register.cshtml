@@ -1,0 +1,38 @@
+﻿@model SimpleWebsite.MVC.Models.User
+
+@{
+    ViewData["Title"] = "Rejestracja";
+}
+
+<div class="row mt-5">
+    <div class="col-lg-4 col-2"></div>
+    <div class="col-lg-4 col justify-content-center">
+        <h1 class="display-5 text-center">@ViewData["Title"]</h1>
+        <hr>
+@using (Html.BeginForm("Register", "Account", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="mb-3">
+        <label for="username" class="form-label">Nazwa użytkownika</label>
+        <input type="text" id="username" name="Username" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="password" class="form-label">Hasło:</label>
+        <input type="password" id="password" name="Password" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Zarejestruj się</button>
+
+    @if (ViewData["UserExistsError"] != null)
+    {
+        <div class="alert alert-danger mt-3">
+            @ViewData["UserExistsError"]
+        </div>
+    }
+    
+}
+    </div>
+    <div class="col-lg-4 col-2"></div>
+</div>

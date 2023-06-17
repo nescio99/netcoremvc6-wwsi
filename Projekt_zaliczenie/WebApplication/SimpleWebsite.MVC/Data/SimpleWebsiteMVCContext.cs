@@ -14,6 +14,7 @@ namespace SimpleWebsite.MVC.Data
         {
         }
 
-        public DbSet<SimpleWebsite.MVC.Models.Product> Product { get; set; } = default!;
+        public DbSet<SimpleWebsite.MVC.Models.Product> Product { get; set; }
+        public DbSet<SimpleWebsite.MVC.Models.User> Users { get; set; }
     }
 }
